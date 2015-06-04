@@ -1,4 +1,5 @@
 #Definição da classe Player
+
 class Player
 
 attr_accessor :name, :score, :password
@@ -9,16 +10,18 @@ attr_accessor :name, :score, :password
     @password = password
   end
 
-p = Player.new(name)
-puts "Digite teu nome:"
-p.name = gets.to_s
-puts "#{p.name} join the game!\nScore = #{p.score}"
+def make_player_archive
 
 player_archive = File.new("/home/matheustoscano/pds/Raza-PDS/")
 
-File.open("/home/matheustoscano/pds/Raza-PDS/player_archive", "a") do |player_archive|
-  player_archive.puts "#{p.name}  #{p.score}"
-  player_archive.puts ""
+end
+
+def write_player_archive(player)
+  def_player = player
+  File.open("/home/matheustoscano/pds/Raza-PDS/player_archive", "a") do |player_archive|
+    player_archive.puts "#{def_player.name}  #{def_player.password}"
+    player_archive.puts ""
+  end
 end
 
 end
