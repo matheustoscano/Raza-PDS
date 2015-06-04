@@ -10,9 +10,11 @@ user_menu_choice = gets.to_i
 if user_menu_choice == 1
 	puts "Teu nome"
 	puts "Tua senha"
-else if user_menu_choice == 2
+end
+if user_menu_choice == 2
 	puts "Escolher username:"
 	puts "Escolher uma senha:"
-else if user_menu_choice == 3
+end
+if user_menu_choice == 3
 	puts "Encerrando..."
 end
