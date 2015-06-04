@@ -1,3 +1,7 @@
+#Definição da classe do menu 1 do jogo
+require_relative 'player'
+class Menu
+
 puts "Raza -  O jogo de Azar!"
 
 	puts "1 - Login"
@@ -8,8 +12,10 @@ puts "Raza -  O jogo de Azar!"
 	user_menu_choice = gets.to_i
 
 	if user_menu_choice == 1
-		puts "Teu nome"
-		puts "Tua senha"
+		new_player = Player.new(name,password)
+		new_player.name = gets.to_s
+		new_player.password = gets.to_s
+		puts "#{new_player.name} join the game!\nPassword = #{new_player.password}"
 	end
 
 	if user_menu_choice == 2
@@ -24,3 +30,4 @@ puts "Raza -  O jogo de Azar!"
 	unless (1..3).include?(user_menu_choice)
 			puts "Por favor digite um número válido!"
 	end
+end
