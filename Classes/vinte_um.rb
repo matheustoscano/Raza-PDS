@@ -13,6 +13,7 @@ player_hand = rand(1..10)
 puts "Sua mão: #{player_hand}"
 
 puts "Deseja receber mais uma carta?(s - n)"
+
 user_card_choice = STDIN.getc
 
 if user_card_choice == "n"
@@ -25,5 +26,6 @@ if user_card_choice == "s"
 	puts "Deseja receber mais uma carta?(s - n)"
 	
 end
+
 
 end
